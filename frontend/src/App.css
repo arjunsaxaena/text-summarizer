@@ -1,0 +1,115 @@
+:root {
+  --bg: #0f1115;
+  --fg: #e6e9ef;
+  --muted: #a0a6b1;
+  --card: #151823;
+  --accent: #7c5cff;
+  --accent-2: #43d9ad;
+  --error: #ff6b6b;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(124,92,255,0.12), transparent),
+              radial-gradient(1000px 700px at 90% 30%, rgba(67,217,173,0.10), transparent),
+              var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 840px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 28px;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+form { display: grid; gap: 12px; }
+
+.textarea {
+  width: 100%;
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid rgba(255,255,255,0.08);
+  outline: none;
+  resize: vertical;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.textarea:focus {
+  border-color: rgba(124,92,255,0.4);
+  box-shadow: 0 0 0 3px rgba(124,92,255,0.15);
+}
+
+.button {
+  width: fit-content;
+  justify-self: end;
+  background: linear-gradient(135deg, var(--accent), #9b7bff);
+  color: white;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.alert {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.alert.error {
+  background: rgba(255,107,107,0.12);
+  border: 1px solid rgba(255,107,107,0.35);
+  color: #ffd7d7;
+}
+
+.result {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: rgba(67,217,173,0.08);
+  border: 1px solid rgba(67,217,173,0.35);
+  border-radius: 12px;
+}
+.result-line { margin: 6px 0; }
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
